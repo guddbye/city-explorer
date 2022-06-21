@@ -32,11 +32,12 @@ class App extends React.Component {
       <>
       <h1>Explore The City Of Your Next Adventure!</h1>
       <form onSubmit={this.handleSubmit} >
-        <label> Enter your city: 
+       
+      <label> Enter your city: 
           <input type="text" onInput={this.handleCityInput}/>
         </label>
-        <button type="submit">EXPLORE!</button>
 
+        <button type="submit">Explore!</button>
       </form>
       {this.state.cityFind && <p>{this.state.cityFind.display_name}</p>}
       </>
