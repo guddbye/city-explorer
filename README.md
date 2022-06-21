@@ -19,3 +19,14 @@
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+
+
+Name of feature: lab06
+
+Estimate of time needed to complete: 15 minutes
+
+Start time: 12:15
+
+Finish time: 12:25
+
+Actual time needed to complete: 1:30
