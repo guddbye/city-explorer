@@ -46,7 +46,7 @@ class App extends React.Component {
 
     return( 
       <>
-        <h1>Find a City</h1>
+        <h2>Find a City</h2>
         <form onSubmit={this.handleCitySubmit}>
           <label>Enter a City: <br/>
           <br/>
@@ -61,6 +61,7 @@ class App extends React.Component {
           <Card.Text>Longitude: {this.state.cityData.lon}</Card.Text>
           <Card.Img src={this.state.cityMap}/>
         </Card>}
+        <footer>Weather by: Brentice Loper</footer>
       </>
     )  
   };
