@@ -20,7 +20,6 @@
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
-
 Name of feature: lab06
 
 Estimate of time needed to complete: 15 minutes
@@ -30,3 +29,8 @@ Start time: 12:15
 Finish time: 12:25
 
 Actual time needed to complete: 1:30
+
+![](https://file%2B.vscode-resource.vscode-cdn.net/Users/brentice/Desktop/Screen%20Shot%202022-06-23%20at%2010.01.36%20AM.png?version%3D1656003791972)
+
+
+![](https://file%2B.vscode-resource.vscode-cdn.net/Users/brentice/Desktop/WRRC1.jpg?version%3D1656003872706)
