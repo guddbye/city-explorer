@@ -7,7 +7,7 @@ import './App.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state= {
+    this.state = {
       city: '',
       cityData: {},
       error: false,
@@ -16,20 +16,24 @@ class App extends React.Component {
   }
 
   handleCityInput = (e) => {
-    this.setState({
+    this.setState ({
       city: e.target.value
     });
   };
 
   handleCitySubmit = async (e) => {
     e.preventDefault();
+
     try{    
 
       let url = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${this.state.city}&format=json`;
+
       let cityInfo = await axios.get(url);
       let cityMap = await `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&center=${cityInfo.data[0].lat},${cityInfo.data[0].lon}&zoom=10`;
+
       console.log(cityInfo.data);
-      this.setState({
+
+      this.setState ({
         cityData: cityInfo.data[0],
         cityMap: cityMap
       });
