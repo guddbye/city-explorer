@@ -1,33 +1,35 @@
 import React from 'react';
+import Card from 'react-bootstrap/Card';
 
 
 class Weather extends React.Component{
-  
-  
-  render(){
+  render() {
+    return(
+    this.props.cityWeather.map((info, idx) => {
+      return  (
+        <WeatherDay
+          day={info}
+          key={idx}
+        />
+      )
+    })
+  )}
+}
 
+class WeatherDay extends React.Component {
+  render() {
+
+    
 
     return (
-      <>
-        <h2>
-          Here is your 3 day Forecast for:
-        </h2>
-        <p>
-          {this.props.returnedWeatherData[0].datetime}
-          {this.props.returnedWeatherData[0].description}
-        </p>
-        <p>
-          {this.props.returnedWeatherData[1].datetime}
-          {this.props.returnedWeatherData[1].description}
-        </p>
-        <p>
-          {this.props.returnedWeatherData[2].datetime}
-          {this.props.returnedWeatherData[2].description}
-        </p>
-      </>
-    );
-    
-  };
-  
+      <Card>
+        <ul>
+          <li>Date: {this.props.day.date}</li>
+          <li>Description: {this.props.day.desc}</li>
+        </ul>
+      </Card>
+    )
+  }
 }
+
 export default Weather;
