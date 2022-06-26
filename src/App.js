@@ -27,15 +27,19 @@ class App extends React.Component {
 
   handleCitySubmit = async (e) => {
     e.preventDefault();
-    try{    
-      // make my request to my API
+    try{
+
       let url = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${this.state.city}&format=json`;
+
       let cityInfo = await axios.get(url);
       let cityMap = await `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&center=${cityInfo.data[0].lat},${cityInfo.data[0].lon}&zoom=11`;
+
       console.log(cityInfo.data);
+
       this.setState({
         cityData: cityInfo.data[0],
         cityMap: cityMap
+
       });
     }
     catch(error){
@@ -46,21 +50,22 @@ class App extends React.Component {
     }
     this.handleGetWeather();
   };
-    // this.handleGetMovies();
 
-  handleGetWeather = async () => {
-    let url = (`${process.env.REACT_APP_SERVER}/weather?searchQuery=${this.state.city}&lat=${this.state.cityData.lat}&lon=${this.state.cityData.lon}`)
-    console.log(url);
-    try{
-      let weatherData = await axios.get(url)
-      console.log(weatherData.data);
-      this.setState({
-        cityWeatherData: weatherData.data,
-      })
-    } catch (error) {
-      console.log(error);
+    handleGetWeather = async () => {
+      let url = (`${process.env.REACT_APP_SERVER}/weather?searchQuery=${this.state.city}&lat=${this.state.cityData.lat}&lon=${this.state.cityData.lon}`)
+
+      try{
+        let weatherData = await axios.get(url)
+
+        console.log(weatherData.data);
+
+        this.setState({
+          cityWeatherData: weatherData.data,
+        })
+      } catch (error) {
+        console.log(error);
+      }
     }
-  }
 
   // handleGetMovies = async () => {
   //   let url = (`${process.env.REACT_APP_SERVER}/movies?searchQuery=${this.state.city}`)
@@ -79,26 +84,26 @@ class App extends React.Component {
     return( 
       <>
         <h2>Find a City</h2>
-        <form onSubmit={this.handleCitySubmit}>
+        <form onSubmit = {this.handleCitySubmit}>
           <label>Enter a City: <br/>
           <br/>
-            <input type="text" onInput={this.handleCityInput} /> 
+            <input type = "text" onInput={this.handleCityInput} /> 
           </label>
           <button>Go</button>
         </form>
-        {this.state.error?<Alert variant="danger">{this.state.errorMessage}</Alert>:
+        {this.state.error?<Alert variant = "danger">{this.state.errorMessage}</Alert>:
         <Card>
           <Card.Text>City: {this.state.cityData.display_name}</Card.Text>
           <Card.Text>Latitude: {this.state.cityData.lat}</Card.Text>
           <Card.Text>Longitude: {this.state.cityData.lon}</Card.Text>
-          <Card.Img src={this.state.cityMap}/>
+          <Card.Img src = {this.state.cityMap}/>
         </Card>}
         <footer>Weather by: <font color ="black">Brentice Loper</font></footer>
         <Weather
-          cityWeather={this.state.cityWeatherData}
+          cityWeather = {this.state.cityWeatherData}
         />
         {/* <Movie
-          cityMovie={this.state.cityMovieInfo}
+          cityMovie = {this.state.cityMovieInfo}
         /> */}
       </>
     )  
