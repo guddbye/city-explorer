@@ -4,8 +4,8 @@ import Card from 'react-bootstrap/Card';
 import Alert from 'react-bootstrap/Alert';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Weather from './Weather';
-import Movie from './Movies';
+import Weather from './Weather.js';
+import Movie from './Movies.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -56,7 +56,7 @@ class App extends React.Component {
       let weatherData = await axios.get(url)
       console.log(weatherData.data);
       this.setState({
-        cityWeatherData: weatherData.data,
+        cityWeatherData: weatherData.data
       })
     } catch (error) {
       console.log(error);

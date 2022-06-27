@@ -42,3 +42,15 @@ Start time: 11:30AM
 
 Finish time: 7:30PM
 Actual time: Way too much time. Lots of errors lots of work.
+
+
+# Time Estimates
+
+Name of feature: Cache.
+
+Estimate of time needed to complete: 1hr
+
+Start time: 9PM
+
+Finish time: 10:30PM
+Actual time needed to complete: 1.5hr
