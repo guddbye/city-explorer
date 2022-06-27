@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import Alert from 'react-bootstrap/Alert';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Weather from './Weather';
 import Movie from './Movies';
@@ -9,7 +10,7 @@ import Movie from './Movies';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state= {
+    this.state = {
       city: '',
       cityData: {},
       error: false,
