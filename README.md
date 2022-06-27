@@ -34,9 +34,10 @@ Actual time needed to complete: 1:30
 
 ![WRRC](WRRC2.png)
 
-Time Estimates
-Feature 2
-Time estimate:
-Start time:
-Finish time:
-Actual time:
+# Time Estimates
+Feature lab09
+Time estimate: 2hrs
+Start time: 11:30AM
+
+Finish time: 7:30PM
+Actual time: Way too much time. Lots of errors lots of work. 
