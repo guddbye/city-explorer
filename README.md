@@ -33,3 +33,10 @@ Actual time needed to complete: 1:30
 ![WRRC](WRRC1.jpg)
 
 ![WRRC](WRRC2.png)
+
+Time Estimates
+Feature 2
+Time estimate:
+Start time:
+Finish time:
+Actual time:

@@ -30,6 +30,6 @@ class WeatherDay extends React.Component {
       </Card>
     )
   }
-};
+}
 
 export default Weather;
