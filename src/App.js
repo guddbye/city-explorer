@@ -3,8 +3,8 @@ import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import Alert from 'react-bootstrap/Alert';
 import './App.css';
-import Weather from './Weather';
-import Movie from './Movies';
+import Weather from './Weather.js';
+import Movie from './Movies.js';
 
 class App extends React.Component {
   constructor(props) {
