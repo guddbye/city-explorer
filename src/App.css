@@ -1,40 +1,41 @@
 form {
-  padding: 9px;
+  padding: 5px;
 }
-.card {
-  background-color: #bdbab3;
-  padding: 25px;
 
+.card {
+  background-color: rgba(255, 255, 255, 0.7); /* Adjust the RGBA values and alpha as needed */
+  padding: 5px;
 }
+
 .card-img {
   width: 550px;
-height: 550px;
-margin: 0 auto; /* Added */
-float: none; /* Added */
-margin-bottom: 10px; /* Added */
+  height: 550px;
+  margin: 0 auto;
+  float: 0 auto;
+  margin-bottom: 10px;
 }
 
 body {
-  background-color: #bdbab3;
-  text-align: center;
+  background-color: lightblue;
+  background-image: url('25501.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center; /* Center align all text */
   font-size: 0.9vw;
-
 }
 
 footer {
   text-align: center;
   font-size: 0.8vw;
-  padding: 25px;
+  padding: 10px;
   color: #b24b4b;
-  
 }
 
-h2 {
-  background-color: #bdbab3;
-  font-size: 1.6vw;
+h1 {
+  font-size: 2.5vw;
   color: #b24b4b;
-  
 }
+
 .App {
   text-align: center;
   background-color: #bdbab3;
@@ -59,19 +60,8 @@ h2 {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
-
 
 .App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  color: #172529;
 }
