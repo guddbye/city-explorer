@@ -7,6 +7,23 @@ form {
   padding: 5px;
 }
 
+.centered-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+
+.card ul {
+  list-style: none;
+  padding-left: 0; /* Reset default padding for list items */
+}
+
+.card {
+  border: none; /* Remove the border */
+}
+
 .card-img {
   width: 550px;
   height: 550px;
